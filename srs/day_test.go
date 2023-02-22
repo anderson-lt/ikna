@@ -15,7 +15,7 @@ func TestDayComparation(t *testing.T) {
 		t.Error("THe days must be the same.")
 	}
 
-	dayB.Next()
+	dayB = dayB.Next()
 
 	if dayA.Equal(dayB) || dayB.Equal(dayA) {
 		t.Log("Day A:", dayA)
@@ -34,7 +34,7 @@ func TestDayStep(t *testing.T) {
 	t.Log("First Day:", day)
 
 	d := day.time.Day()
-	day.Step(4)
+	day = day.Step(4)
 	t.Log("Stepping 4:", day)
 
 	if day.time.Day() != d+4 {
